@@ -28,6 +28,7 @@ jobs:
     - name: Prepare to deploy
       run: |
         yarn global add firebase-tools
+        yarn build && yarn generate
     - name: Deploy to Firebase
       run: |
         yarn firebase deploy --token $FIREBASE_TOKEN
